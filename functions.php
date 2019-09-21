@@ -19,6 +19,7 @@ add_action('wp_enqueue_scripts', 'kwp_enqueue_scripts');
 function kwp_theme_features()
 {
     add_theme_support('post-thumbnails');
+    add_theme_support( 'html5', array( 'comment-list' ) );
 }
 
 add_action('after_setup_theme', 'kwp_theme_features');
