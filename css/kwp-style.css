@@ -1,13 +1,13 @@
 body {
     padding-top: 56px;
-  }
+}
   
-  .comment .comment-content img{
+.comment .comment-content img{
     width: 100%;
-  }
+}
 
 
-  .flex-center {
+.flex-center {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -48,10 +48,3 @@ body {
 .comment .media p {
     margin-bottom: .1rem;
 }
-
-/* .hoverable {
-    transition: box-shadow .5s;
-}
-.hoverable:hover {
-    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2);
-} */

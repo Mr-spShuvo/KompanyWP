@@ -19,7 +19,24 @@ add_action('wp_enqueue_scripts', 'kwp_enqueue_scripts');
 function kwp_theme_features()
 {
     add_theme_support('post-thumbnails');
-    add_theme_support( 'html5', array( 'comment-list' ) );
+    add_theme_support('html5', array('comment-list'));
 }
 
 add_action('after_setup_theme', 'kwp_theme_features');
+
+
+
+function kwp_widgets_init()
+{
+
+    register_sidebar(array(
+        'name'          => __('Main Sidebar', 'kwp'),
+        'id'            => 'main-sidebar',
+        'description'   => __('Widgets in this area will be shown on all posts and pages.', 'kwp'),
+        'before_widget' => '<div class="card my-4">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h5 class="card-header">',
+        'after_title'   => '</h5>',
+    ));
+}
+add_action('widgets_init', 'kwp_widgets_init');
